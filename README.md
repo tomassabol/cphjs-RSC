@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Copenhagen JS 9/2025 - React Server Components
+
+This project was created for a demo presentation at Copenhagen JS (September 2025) showcasing React Server Components (RSC), streaming capabilities, and the idea behind RSC.
+
+## Project Overview
+
+This repository contains three main demonstrations:
+
+1. **Next.js Streaming Demo** (`/app/streaming/`) - Shows React Suspense and streaming with multiple async components
+2. **Vanilla RSC Implementation** (`/vanilla-rsc/`) - A custom React Server Components implementation in vanilla JavaScript
+3. **Initial Vanilla Project** (`/vanilla-rsc-init/`) - The starting point before RSC implementation
+
+## Project Structure
+
+```
+├── app/
+│   ├── streaming/          # Next.js streaming demo with Suspense
+│   ├── cat-names/          # Cat name generator demo
+│   └── ...
+├── vanilla-rsc/            # Custom RSC implementation
+│   ├── server.ts           # Node.js server with RSC-like behavior
+│   ├── client.js           # Client-side JavaScript
+│   └── styles.css          # Styling
+├── vanilla-rsc-init/       # Initial vanilla implementation
+│   ├── server.ts           # Basic server setup
+│   ├── client.js           # Simple client code
+│   └── styles.css          # Styling
+└── cats.txt               # Cat names data file
+```
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Bun
+
+### Running the Demos
+
+#### 1. Next.js Streaming Demo
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit [http://localhost:3000/streaming](http://localhost:3000/streaming) to see the streaming demo with multiple Suspense boundaries.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+#### 2. Vanilla RSC Implementation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+bun run cat-names
+```
 
-## Learn More
+Visit [http://localhost:3000](http://localhost:3000) to see the vanilla RSC implementation.
 
-To learn more about Next.js, take a look at the following resources:
+#### 3. Initial Vanilla Project
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+bun run cat-names-init
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+_Created for Copenhagen JS September 2025 - React Server Components Demo_
